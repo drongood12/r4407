@@ -107,7 +107,7 @@
 			src.now_pushing = 1
 			if (!AM.anchored)
 				var/t = get_dir(src, AM)
-				step(AM, t)
+				step(AM, t, step_size)
 			src.now_pushing = null
 		return
 	return

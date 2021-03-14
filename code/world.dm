@@ -1,0 +1,2 @@
+world
+	fps = 20
