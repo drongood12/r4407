@@ -158,9 +158,3 @@ proc/countJob(rank)
 		W.layer = 20
 	else
 		del(W)
-
-/proc/AutoUpdateAI(obj/subject)
-	if (subject!=null)
-		for(var/mob/living/silicon/ai/M in world)
-			if ((M.client && M.machine == subject))
-				subject.attack_ai(M)
