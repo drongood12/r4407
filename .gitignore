@@ -1,0 +1,10 @@
+/data/**/*
+/tmp/**/*
+/cfg/**/*
+/*.so
+*.mdme
+*.dmb
+*.rsc
+*.lk
+*.int
+*.backup
