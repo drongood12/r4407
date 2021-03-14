@@ -1,6 +1,49 @@
 /world/New()
 	..()
 
+	src.load_configuration()
+
+
+	if (config && config.server_name != null && config.server_suffix && world.port > 0)
+		// dumb and hardcoded but I don't care~
+		config.server_name += " #[(world.port % 1000) / 100]"
+
+	src.load_mode()
+	src.load_motd()
+	src.load_rules()
+	src.load_admins()
+
+	src.update_status()
+	makepowernets()
+	sun = new /datum/sun()
+
+	vote = new /datum/vote()
+
+	radio_controller = new /datum/controller/radio()
+	//main_hud1 = new /obj/hud()
+	data_core = new /obj/datacore()
+
+	..()
+
+	sleep(50)
+
+	plmaster = new /obj/overlay(  )
+	plmaster.icon = 'icons/effects/tile_effects.dmi'
+	plmaster.icon_state = "plasma"
+	plmaster.layer = FLY_LAYER
+	plmaster.mouse_opacity = 0
+
+	slmaster = new /obj/overlay(  )
+	slmaster.icon = 'icons/effects/tile_effects.dmi'
+	slmaster.icon_state = "sleeping_agent"
+	slmaster.layer = FLY_LAYER
+	slmaster.mouse_opacity = 0
+
+	src.update_status()
+
+	master_controller = new /datum/controller/game_controller()
+	spawn(-1) master_controller.setup()
+
 	diary = file("data/logs/[time2text(world.realtime, "YYYY/MM-Month/DD-Day")].log")
 	diary << ""
 	diary << ""
