@@ -1,9 +1,8 @@
 obj/machinery/atmospherics/mixer
+	name = "Gas mixer"
 	icon = 'icons/obj/atmospherics/mixer.dmi'
 	icon_state = "intact_off"
 	density = 1
-
-	name = "Gas mixer"
 
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH|WEST

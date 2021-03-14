@@ -14,7 +14,7 @@
 /obj/machinery/door/firedoor
 	name = "Firelock"
 	icon = 'icons/obj/doors/Doorfire.dmi'
-	icon_state = "door0"
+	icon_state = "door_open"
 	var/blocked = null
 	opacity = 0
 	density = 0
@@ -22,13 +22,13 @@
 
 /obj/machinery/door/firedoor/border_only
 	name = "Firelock"
-	icon = 'icons/obj/doors/rapid_pdoor.dmi'
-	icon_state = "door0"
+	icon = 'icons/obj/doors/Doorfire.dmi'
+	icon_state = "door_open"
 
 /obj/machinery/door/poddoor
 	name = "Podlock"
 	icon = 'icons/obj/doors/rapid_pdoor.dmi'
-	icon_state = "pdoor1"
+	icon_state = "pdoor_open"
 	var/id = 1.0
 
 /obj/machinery/door/window

@@ -1015,7 +1015,7 @@ Total SMES charging rate should not exceed total power generation rate, or an ov
 
 /obj/item/weapon/tank/jetpack
 	name = "Jetpack (Oxygen)"
-	icon_state = "jetpack0"
+	icon_state = "jetpack_base"
 	var/on = 0.0
 	w_class = 4.0
 	item_state = "jetpack"
